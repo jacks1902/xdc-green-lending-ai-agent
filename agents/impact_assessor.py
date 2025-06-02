@@ -38,10 +38,10 @@ class ImpactAssessorAgent:
 
         Returns:
             dict: A dictionary containing impact assessment results:
-                  - 'impact_score' (float)
-                  - 'impact_category' (str)
-                  - 'feedback_notes' (list)
-                  - 'underwriting_report' (str) # NEW: Comprehensive report
+                    - 'impact_score' (float)
+                    - 'impact_category' (str)
+                    - 'feedback_notes' (list)
+                    - 'underwriting_report' (str) # NEW: Comprehensive report
         """
         logging.info(f"Assessing impact for project: {project_description[:50]}...")
         time.sleep(1.5) # Simulate AI processing time
@@ -117,6 +117,13 @@ class ImpactAssessorAgent:
         """
         logging.info("Simulating LLM generation of underwriting report...")
         
+        # --- FIX APPLIED HERE: Prepare feedback_report_text before embedding in f-string ---
+        feedback_report_text = 'No specific feedback generated.'
+        if feedback_notes:
+            # Join notes with a newline and a hyphen. '\n' is the actual newline character.
+            feedback_report_text = '- ' + '\n- '.join(feedback_notes)
+        # --- END FIX ---
+
         report_template = f"""
 ## Comprehensive Green Loan Underwriting Report
 
@@ -140,7 +147,7 @@ class ImpactAssessorAgent:
 * **Calculated Impact Score:** {impact_score:.2f}/100
 * **Impact Category:** {impact_category}
 * **Key Feedback/Recommendations:**
-    {'- ' + '\\n- '.join(feedback_notes) if feedback_notes else 'No specific feedback generated.'}
+    {feedback_report_text} 
 
 **ESG Factors Analysis (Simulated LLM Insights):**
 This project demonstrates a strong commitment to environmental sustainability through its focus on {rwa_data.get('project_type', 'renewable energy')}. The estimated CO₂ reduction and energy generation metrics are significant, contributing positively to climate action goals. Socially, the project's ability to create {rwa_data.get('estimated_jobs_created', 0)} jobs is a notable benefit for local communities. The presence of a '{rwa_data.get('certification_level', 'N/A')}' certification adds credibility to its green credentials.
@@ -156,4 +163,3 @@ Based on the comprehensive assessment, this green loan proposal presents a compe
 This report is a simulated output and should be validated with real-world data and expert analysis.
 """
         return report_template
-

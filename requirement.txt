@@ -1,0 +1,46 @@
+streamlit
+pandas
+numpy
+web3
+eth-account
+eth-hash
+eth-keyfile
+eth-keys
+eth-rlp
+eth-typing
+eth-utils
+eth_abi
+hexbytes
+rlp
+ckzg # This might be pulled by web3, but keeping it if you had issues
+requests
+certifi
+charset-normalizer
+idna
+urllib3
+aiohttp # web3.py often uses this for async HTTP requests
+aiosignal
+asyncio
+attrs
+frozenlist
+multidict
+yarl
+blinker # Often a dependency of Streamlit
+click # Often a dependency of Streamlit
+colorama # Often a dependency of Streamlit or other libs
+MarkupSafe
+packaging
+pillow # Often a dependency of Streamlit
+python-dateutil
+pytz
+tzdata # All often pulled by pandas
+pydantic
+pydantic_core
+referencing
+rpds-py
+jsonschema # Pulled by pydantic or other validation
+jsonschema-specifications # Pulled by pydantic or other validation
+toml # If you use toml for anything beyond st.secrets locally
+regex
+tenacity
+tornado # web3.py or Streamlit might use this

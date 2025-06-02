@@ -1,0 +1,9 @@
+rwa_id,location,asset_type,estimated_value_usd,estimated_co2_reduction_tons_per_year,estimated_energy_generated_kwh_per_year,estimated_jobs_created,estimated_water_savings_liters_per_year,certification_level,project_type
+RWA001,Mumbai,Solar Farm,5000000,5000,2000000,20,1000000,None,Solar Farm
+RWA002,Delhi,Green Building,3000000,1200,500000,15,500000,LEED Gold,Green Building
+RWA003,Bangalore,Wind Turbine,7000000,8000,3000000,25,0,None,Wind Turbine
+RWA004,Chennai,Sustainable Agriculture,1500000,300,50000,10,2000000,Organic Certified,Sustainable Agriculture
+RWA005,Kolkata,Waste-to-Energy Plant,10000000,10000,4000000,30,0,ISO 14001,Waste-to-Energy
+RWA006,Pune,Community Health Center,800000,50,10000,5,50000,None,Community Health Center
+RWA007,Hyderabad,EV Charging Network,2000000,600,0,8,0,None,EV Charging Infrastructure
+RWA008,Ahmedabad,Water Treatment Plant,4000000,100,0,12,5000000,ISO 9001,Water Treatment Plant

@@ -1,0 +1,6 @@
+borrower_id,credit_score,default_history,borrower_type
+B001,750,0,SME
+B002,620,1,Individual
+B003,780,0,Corporation
+B004,580,1,SME
+B005,710,0,Individual

@@ -1,0 +1,15 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Streamlit secrets
+secrets.toml
+
+# Other common ignore files
+.DS_Store # macOS specific
+*.log

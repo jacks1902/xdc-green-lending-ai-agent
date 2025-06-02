@@ -1,11 +1,11 @@
 streamlit==1.45.1
 pandas==2.2.3
 numpy==2.2.6
-web3==7.12.0 # Keep this line
+web3==7.12.0
 requests==2.32.3
-toml==0.10.2 # If you use toml for anything outside st.secrets locally
+toml==0.10.2 # Keep if you're using `toml` for any reason in your code (e.g., local configs)
 
-# Core web3.py dependencies (ensure these are present with these versions)
+# Core web3.py dependencies (Crucial for its cryptographic and EVM functions)
 eth-account==0.13.7
 eth-hash==0.7.1
 eth-keyfile==0.8.1
@@ -17,9 +17,9 @@ eth_abi==5.2.0
 ckzg==2.1.1
 hexbytes==1.3.1
 rlp==4.1.0
-pycryptodome==3.23.0 # IMPORTANT for cryptographic functions
+pycryptodome==3.23.0 # Very important for web3.py
 
-# Asynchronous HTTP client for web3.py (ensure these are present)
+# Asynchronous HTTP client for web3.py (web3 uses aiohttp)
 aiohttp==3.12.6
 aiosignal==1.3.2
 asyncio==3.4.3
@@ -27,8 +27,7 @@ frozenlist==1.6.0
 multidict==6.4.4
 yarl==1.20.0
 
-# Other non-critical Streamlit/Pandas dependencies from your previous list if you want to be safe
-# But try without them first if the list becomes too large
+# Other common dependencies for Streamlit/Pandas that might be needed by transitive deps
 blinker==1.9.0
 click==8.2.1
 colorama==0.4.6

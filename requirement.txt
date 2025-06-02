@@ -1,2 +1,3 @@
 streamlit
 web3==6.11.1
+requests # Add requests - it's a very common, light dependency
